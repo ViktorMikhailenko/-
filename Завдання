@@ -1,0 +1,19 @@
+s=float(input("What is Bitcoin price today?")) # Просимо користувача ввести курс біткоїна
+while s<=0: #Перевіряєм, чи є число позитивним
+    print("You have entered",(s), "Bitcoin exchange rate cannot be negative, please try again.") #Сповіщаємо користувача про помилку
+    s=float(input("What is Bitcoin price today?")) #Просим ввести число повторно
+print("Bitcoin price today is:",(s)) #Вивидим число, якщо воно коректне
+
+d=float(input("How much $ do you have?")) #Просим користувача ввести кількість доларів для обміну
+while d<=0: #Перевіряєм, чи є число позитивним
+    if d<0:
+        print("You have entered",(d),"The dollar amount must not be negative. Try again") #Вказуєм на відємне число
+    elif d==0:
+        print("You have entered",(d),"If you have no money - just go to work") #Закликаїм користувача до дій, якщо в нього немає грошей
+    d=float(input("How much $ do you have?")) #Просим повторно ввести наявні кошти
+print("You have $:",(d)) #Виводим коректну цифру
+c=d/s #Вводим перемінну, що визначає можливість придбання біткоїнів
+if c<=1:
+    print("You can buy", (c),"Bitcoin") #Якщо можливо придбати меньше 1 біткоїну пишим "Bitcoin"
+else:
+    print("You can buy", (c),"Bitcoins") #Якщо можливо придбати більше 1 біткоїну пишим додаєм закінчення  "s" -"Bitcoins"
